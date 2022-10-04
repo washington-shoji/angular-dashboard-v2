@@ -15,7 +15,14 @@ import { SettingsComponent } from './components/settings/settings.component';
 const materialModules: MatIconModule[] = [MatIconModule];
 
 @NgModule({
-  declarations: [AppComponent, BodyComponent, SidenavbarComponent, DashboardComponent, StatisticsComponent, SettingsComponent],
+  declarations: [
+    AppComponent,
+    BodyComponent,
+    SidenavbarComponent,
+    DashboardComponent,
+    StatisticsComponent,
+    SettingsComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
