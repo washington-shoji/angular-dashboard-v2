@@ -15,8 +15,14 @@ import { BookService } from "./components/book/book.service";
 import { HttpClientModule } from "@angular/common/http";
 import { BookComponent } from './components/book/book.component';
 import { BookDialogComponent } from './components/book/book-dialog/book-dialog.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatButtonModule } from '@angular/material/button';
 
-const materialModules: MatIconModule[] = [MatIconModule];
+const materialModules: MatIconModule[] = [
+  MatIconModule,
+  MatDialogModule,
+  MatButtonModule
+];
 
 @NgModule({
   imports: [
@@ -39,4 +45,4 @@ const materialModules: MatIconModule[] = [MatIconModule];
   providers: [BookService],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }
