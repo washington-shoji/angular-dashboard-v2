@@ -17,7 +17,7 @@ export type Book = {
 }
 
 @Injectable()
-export class DashboardService {
+export class BookService {
   configUrl = 'http://localhost:8181/api/';
   bookUrl = 'book';
 
