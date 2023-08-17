@@ -1,4 +1,9 @@
-<h1>Books</h1>
+<div class="book-header">
+    <h1>Books</h1>
+    <button mat-raised-button (click)="openDialog()">
+        Create Book
+    </button>
+</div>
 <ng-container *ngFor="let book of books">
     <div class="card">
         <div class="card-head">{{book.title}}</div>

@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { Book, BookService } from "../book/book.service";
 import { Subscription } from "rxjs";
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { BookDialogComponent } from './book-dialog/book-dialog.component';
 
 @Component({
   selector: 'app-book',
@@ -10,10 +12,13 @@ import { Subscription } from "rxjs";
 export class BookComponent implements OnInit {
   private _subscription: Subscription;
 
+  book?: Book;
   books: Book[] = [];
   loading: boolean = false;
 
-  constructor(private dashboardService: BookService) {
+  constructor(
+    private dashboardService: BookService,
+    public dialog: MatDialog) {
     this._subscription = new Subscription();
   }
 
@@ -42,6 +47,18 @@ export class BookComponent implements OnInit {
         }
       )
     );
+  }
+
+  openDialog(): void {
+    const dialogRef = this.dialog.open(BookDialogComponent, {
+      width: '250px',
+      data: {},
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+      this.book = result;
+    });
   }
 
 }
