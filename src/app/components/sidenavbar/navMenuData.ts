@@ -1,8 +1,4 @@
-export interface INavbarData {
-  routeLink: string;
-  icon: string;
-  label: string;
-}
+import {INavbarData} from "../../interfaces/navbardata.interface";
 
 export const navbarData: INavbarData[] = [
   {

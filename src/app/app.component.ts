@@ -1,9 +1,5 @@
 import { Component } from '@angular/core';
-
-interface SideNavToggle {
-  screenWidth: number;
-  collapsed: boolean;
-}
+import {ISideNavToggle} from "./interfaces/sidenavbartoggle.interface";
 
 @Component({
   selector: 'app-root',
@@ -16,7 +12,7 @@ export class AppComponent {
   isSideNavCollapsed = false;
   screenWidth = 0;
 
-  onToggleSideNav(data: SideNavToggle): void {
+  onToggleSideNav(data: ISideNavToggle): void {
     this.screenWidth = data.screenWidth;
     this.isSideNavCollapsed = data.collapsed;
   }

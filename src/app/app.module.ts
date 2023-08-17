@@ -11,10 +11,19 @@ import { SidenavbarComponent } from './components/sidenavbar/sidenavbar.componen
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { StatisticsComponent } from './components/statistics/statistics.component';
 import { SettingsComponent } from './components/settings/settings.component';
+import { DashboardService } from "./components/dashboard/dashboard.service";
+import { HttpClientModule } from "@angular/common/http";
 
 const materialModules: MatIconModule[] = [MatIconModule];
 
 @NgModule({
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
+    materialModules,
+  ],
   declarations: [
     AppComponent,
     BodyComponent,
@@ -23,13 +32,7 @@ const materialModules: MatIconModule[] = [MatIconModule];
     StatisticsComponent,
     SettingsComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    materialModules,
-  ],
-  providers: [],
+  providers: [DashboardService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -13,11 +13,7 @@ import {
   trigger,
 } from '@angular/animations';
 import { navbarData } from './navMenuData';
-
-interface SideNavToggle {
-  screenWidth: number;
-  collapsed: boolean;
-}
+import {ISideNavToggle} from "../../interfaces/sidenavbartoggle.interface";
 
 @Component({
   selector: 'app-sidenavbar',
@@ -48,7 +44,7 @@ interface SideNavToggle {
   ],
 })
 export class SidenavbarComponent implements OnInit {
-  @Output() onToggleSideNav: EventEmitter<SideNavToggle> = new EventEmitter();
+  @Output() onToggleSideNav: EventEmitter<ISideNavToggle> = new EventEmitter();
   collapsed = false;
   screenWidth = 0;
   navData = navbarData;
