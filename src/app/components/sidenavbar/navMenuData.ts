@@ -16,4 +16,9 @@ export const navbarData: INavbarData[] = [
     icon: 'settings',
     label: 'Settings',
   },
+    {
+    routeLink: 'books',
+    icon: 'auto_stories',
+    label: 'Books',
+  },
 ];
