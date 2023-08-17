@@ -1,0 +1,9 @@
+<h1>Books</h1>
+<ng-container *ngFor="let book of books">
+    <div class="card">
+        <div class="card-head">{{book.title}}</div>
+        <div class="card-body">
+            {{book.description}}
+        </div>
+    </div>
+</ng-container>
