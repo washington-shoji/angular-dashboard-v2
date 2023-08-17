@@ -11,8 +11,10 @@ import { SidenavbarComponent } from './components/sidenavbar/sidenavbar.componen
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { StatisticsComponent } from './components/statistics/statistics.component';
 import { SettingsComponent } from './components/settings/settings.component';
-import { DashboardService } from "./components/dashboard/dashboard.service";
+import { BookService } from "./components/book/book.service";
 import { HttpClientModule } from "@angular/common/http";
+import { BookComponent } from './components/book/book.component';
+import { BookDialogComponent } from './components/book/book-dialog/book-dialog.component';
 
 const materialModules: MatIconModule[] = [MatIconModule];
 
@@ -31,8 +33,10 @@ const materialModules: MatIconModule[] = [MatIconModule];
     DashboardComponent,
     StatisticsComponent,
     SettingsComponent,
+    BookComponent,
+    BookDialogComponent,
   ],
-  providers: [DashboardService],
+  providers: [BookService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
